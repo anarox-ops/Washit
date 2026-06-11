@@ -1,0 +1,19 @@
+{
+  "name": "washit",
+  "version": "1.0.0",
+  "description": "WashIt — Premium Sneaker Cleaning Service",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["sneaker", "cleaning", "washit"],
+  "author": "Anubhav Poddar",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "nodemailer": "^6.9.16"
+  }
+}

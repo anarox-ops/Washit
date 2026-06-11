@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WashIt — Premium Sneaker Cleaning Service</title>
+    <meta name="description" content="WashIt is a premium sneaker cleaning and restoration service. Book your sneaker wash today with special treatment for branded kicks.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ░░░ NAVBAR ░░░ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" id="logo">
+                <span class="logo-icon">👟</span>
+                <span class="logo-text">Wash<span class="logo-accent">It</span></span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#branded">Branded Care</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+            </ul>
+            <button class="btn btn-nav" id="nav-book-btn" onclick="openBookingModal()">Book Now</button>
+            <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ░░░ HERO SECTION ░░░ -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-particles" id="hero-particles"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge" id="hero-badge">
+                    <span class="badge-dot"></span>
+                    Premium Sneaker Care
+                </div>
+                <h1 class="hero-title" id="hero-title">
+                    Your Kicks Deserve<br>
+                    <span class="gradient-text">The Royal Treatment</span>
+                </h1>
+                <p class="hero-subtitle" id="hero-subtitle">
+                    From everyday sneakers to rare collectibles — we clean, restore, and protect your footwear with expert precision and premium products.
+                </p>
+                <div class="hero-cta">
+                    <button class="btn btn-primary btn-lg" id="hero-cta-btn" onclick="openBookingModal()">
+                        <span>Book a Wash</span>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                    <button class="btn btn-outline btn-lg" id="hero-pricing-btn" onclick="scrollToSection('pricing')">
+                        View Pricing
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-num" id="stat-pairs">5,000+</span>
+                        <span class="stat-label">Pairs Cleaned</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-num" id="stat-rating">4.9★</span>
+                        <span class="stat-label">Customer Rating</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-num" id="stat-brands">50+</span>
+                        <span class="stat-label">Brands Served</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-img-glow"></div>
+                <img src="images/hero.png" alt="Clean premium sneakers" id="hero-img">
+                <div class="hero-float-card card-price" id="float-card-price">
+                    <span class="float-icon">💰</span>
+                    <div>
+                        <span class="float-label">Starting at</span>
+                        <span class="float-value">₹199</span>
+                    </div>
+                </div>
+                <div class="hero-float-card card-time" id="float-card-time">
+                    <span class="float-icon">⏱️</span>
+                    <div>
+                        <span class="float-label">Ready in</span>
+                        <span class="float-value">24 hrs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ░░░ SERVICES SECTION ░░░ -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Services</span>
+                <h2 class="section-title">What We <span class="gradient-text">Offer</span></h2>
+                <p class="section-desc">Choose the perfect clean for every pair in your collection.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" id="service-basic">
+                    <div class="service-icon">🧽</div>
+                    <h3>Basic Wash</h3>
+                    <p>Exterior cleaning, lace wash, and deodorizing for everyday sneakers.</p>
+                    <span class="service-price">₹199</span>
+                </div>
+                <div class="service-card" id="service-deep">
+                    <div class="service-icon">🫧</div>
+                    <h3>Deep Clean</h3>
+                    <p>Full interior + exterior deep wash, stain removal, and sole whitening.</p>
+                    <span class="service-price">₹399</span>
+                </div>
+                <div class="service-card featured" id="service-premium">
+                    <div class="card-ribbon">Popular</div>
+                    <div class="service-icon">✨</div>
+                    <h3>Premium Restore</h3>
+                    <p>Complete restoration with color touch-up, re-gluing, and crease removal.</p>
+                    <span class="service-price">₹699</span>
+                </div>
+                <div class="service-card" id="service-branded">
+                    <div class="service-icon">👑</div>
+                    <h3>Branded Special</h3>
+                    <p>Expert care for Nike, Adidas, Jordan, Yeezy & luxury sneakers with premium products.</p>
+                    <span class="service-price">₹999+</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ░░░ PRICING TABLE ░░░ -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Transparent Pricing</span>
+                <h2 class="section-title">Pick Your <span class="gradient-text">Plan</span></h2>
+                <p class="section-desc">No hidden fees. Branded sneakers get specialized treatment at premium rates.</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- BASIC -->
+                <div class="pricing-card" id="pricing-basic">
+                    <div class="pricing-header">
+                        <span class="pricing-tier">Basic</span>
+                        <div class="pricing-amount">
+                            <span class="currency">₹</span>
+                            <span class="amount">199</span>
+                            <span class="per">/pair</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> Exterior wipe-down</li>
+                        <li><span class="check">✓</span> Lace cleaning</li>
+                        <li><span class="check">✓</span> Deodorizing</li>
+                        <li class="disabled"><span class="cross">✕</span> Stain removal</li>
+                        <li class="disabled"><span class="cross">✕</span> Sole whitening</li>
+                        <li class="disabled"><span class="cross">✕</span> Color restoration</li>
+                    </ul>
+                    <button class="btn btn-outline btn-full" onclick="openBookingModal('Basic Wash', 199)">Book Basic</button>
+                </div>
+
+                <!-- DEEP CLEAN -->
+                <div class="pricing-card" id="pricing-deep">
+                    <div class="pricing-header">
+                        <span class="pricing-tier">Deep Clean</span>
+                        <div class="pricing-amount">
+                            <span class="currency">₹</span>
+                            <span class="amount">399</span>
+                            <span class="per">/pair</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> Full exterior wash</li>
+                        <li><span class="check">✓</span> Interior deep clean</li>
+                        <li><span class="check">✓</span> Stain removal</li>
+                        <li><span class="check">✓</span> Sole whitening</li>
+                        <li><span class="check">✓</span> Deodorizing</li>
+                        <li class="disabled"><span class="cross">✕</span> Color restoration</li>
+                    </ul>
+                    <button class="btn btn-outline btn-full" onclick="openBookingModal('Deep Clean', 399)">Book Deep Clean</button>
+                </div>
+
+                <!-- PREMIUM -->
+                <div class="pricing-card popular" id="pricing-premium">
+                    <div class="popular-badge">🔥 Most Popular</div>
+                    <div class="pricing-header">
+                        <span class="pricing-tier">Premium</span>
+                        <div class="pricing-amount">
+                            <span class="currency">₹</span>
+                            <span class="amount">699</span>
+                            <span class="per">/pair</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> Everything in Deep Clean</li>
+                        <li><span class="check">✓</span> Color restoration</li>
+                        <li><span class="check">✓</span> Crease removal</li>
+                        <li><span class="check">✓</span> Re-gluing & repairs</li>
+                        <li><span class="check">✓</span> Protective coating</li>
+                        <li><span class="check">✓</span> Premium packaging</li>
+                    </ul>
+                    <button class="btn btn-primary btn-full" onclick="openBookingModal('Premium Restore', 699)">Book Premium</button>
+                </div>
+
+                <!-- BRANDED -->
+                <div class="pricing-card branded" id="pricing-branded">
+                    <div class="branded-badge">👑 Exclusive</div>
+                    <div class="pricing-header">
+                        <span class="pricing-tier">Branded Care</span>
+                        <div class="pricing-amount">
+                            <span class="currency">₹</span>
+                            <span class="amount">999</span>
+                            <span class="per">& up</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> All Premium features</li>
+                        <li><span class="check">✓</span> Brand-specific products</li>
+                        <li><span class="check">✓</span> Material-safe cleaning</li>
+                        <li><span class="check">✓</span> Authentication check</li>
+                        <li><span class="check">✓</span> Insured handling</li>
+                        <li><span class="check">✓</span> Priority turnaround</li>
+                    </ul>
+                    <button class="btn btn-branded btn-full" onclick="openBookingModal('Branded Care', 999)">Book Branded</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ░░░ BRANDED SECTION ░░░ -->
+    <section class="branded-section" id="branded">
+        <div class="container">
+            <div class="branded-layout">
+                <div class="branded-img-wrap">
+                    <img src="images/branded.png" alt="Branded sneaker care" id="branded-img">
+                    <div class="branded-img-overlay"></div>
+                </div>
+                <div class="branded-content">
+                    <span class="section-tag">Branded Sneakers</span>
+                    <h2 class="section-title">Extra Love for<br><span class="gradient-text">Your Grails</span></h2>
+                    <p class="branded-desc">
+                        Your Jordan 1s, Yeezy 350s, Dunk Lows, and Air Max deserve more than a regular wash. Our branded care service uses specialized, material-safe cleaning agents tailored to each brand's unique construction.
+                    </p>
+                    <div class="brand-tags">
+                        <span class="brand-tag" id="tag-nike">Nike</span>
+                        <span class="brand-tag" id="tag-adidas">Adidas</span>
+                        <span class="brand-tag" id="tag-jordan">Jordan</span>
+                        <span class="brand-tag" id="tag-yeezy">Yeezy</span>
+                        <span class="brand-tag" id="tag-nb">New Balance</span>
+                        <span class="brand-tag" id="tag-puma">Puma</span>
+                        <span class="brand-tag" id="tag-reebok">Reebok</span>
+                        <span class="brand-tag" id="tag-converse">Converse</span>
+                    </div>
+                    <div class="branded-features">
+                        <div class="bf-item">
+                            <span class="bf-icon">🧪</span>
+                            <div>
+                                <strong>Brand-Specific Solutions</strong>
+                                <p>pH-balanced formulas for leather, mesh, suede, and knit.</p>
+                            </div>
+                        </div>
+                        <div class="bf-item">
+                            <span class="bf-icon">🛡️</span>
+                            <div>
+                                <strong>Insured Handling</strong>
+                                <p>Your sneakers are fully insured during the cleaning process.</p>
+                            </div>
+                        </div>
+                        <div class="bf-item">
+                            <span class="bf-icon">⚡</span>
+                            <div>
+                                <strong>Priority Service</strong>
+                                <p>Branded orders get fast-tracked with 12-hour turnaround.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-lg" onclick="openBookingModal('Branded Care', 999)">
+                        Book Branded Care →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ░░░ HOW IT WORKS ░░░ -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Simple Process</span>
+                <h2 class="section-title">How It <span class="gradient-text">Works</span></h2>
+                <p class="section-desc">Four simple steps to get your sneakers looking factory-fresh.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card" id="step-1">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">📱</div>
+                    <h3>Book Online</h3>
+                    <p>Choose your service and schedule a pickup date that works for you.</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-card" id="step-2">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">📦</div>
+                    <h3>We Pick Up</h3>
+                    <p>Our team picks up your sneakers from your doorstep — free of charge.</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-card" id="step-3">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">🫧</div>
+                    <h3>Expert Clean</h3>
+                    <p>Your kicks are cleaned by trained specialists using premium products.</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-card" id="step-4">
+                    <div class="step-number">04</div>
+                    <div class="step-icon">🚀</div>
+                    <h3>Delivered Fresh</h3>
+                    <p>We deliver your spotless sneakers back within 24-48 hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ░░░ PROCESS IMAGE SECTION ░░░ -->
+    <section class="process-showcase" id="process-showcase">
+        <div class="container">
+            <div class="showcase-layout">
+                <div class="showcase-content">
+                    <span class="section-tag">Our Craft</span>
+                    <h2 class="section-title">Precision <span class="gradient-text">Cleaning</span></h2>
+                    <p>Every pair is treated with the utmost care. Our specialists use premium brushes, eco-friendly solutions, and meticulous hand-cleaning techniques to bring your sneakers back to life.</p>
+                    <div class="showcase-stats">
+                        <div class="ss-item">
+                            <strong>100%</strong>
+                            <span>Hand-Cleaned</span>
+                        </div>
+                        <div class="ss-item">
+                            <strong>Eco</strong>
+                            <span>Safe Products</span>
+                        </div>
+                        <div class="ss-item">
+                            <strong>48hr</strong>
+                            <span>Max Turnaround</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-img-wrap">
+                    <img src="images/process.png" alt="Sneaker cleaning process" id="process-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ░░░ BOOKING MODAL ░░░ -->
+    <div class="modal-overlay" id="booking-modal">
+        <div class="modal" id="modal-content">
+            <button class="modal-close" id="modal-close" onclick="closeBookingModal()">✕</button>
+            <div class="modal-header">
+                <h2>Book Your <span class="gradient-text">Sneaker Wash</span></h2>
+                <p>Fill in the details and we'll take care of the rest!</p>
+            </div>
+            <form id="booking-form" onsubmit="handleBooking(event)">
+                <div class="form-group">
+                    <label for="customer-name">Your Name</label>
+                    <input type="text" id="customer-name" placeholder="e.g. Anubhav Poddar" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-phone">Phone Number</label>
+                    <input type="tel" id="customer-phone" placeholder="e.g. 9876543210" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-email">Email Address</label>
+                    <input type="email" id="customer-email" placeholder="e.g. anubhav@example.com" required>
+                    <span class="form-hint">📧 Booking confirmation will be sent here</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="sneaker-brand">Sneaker Brand</label>
+                        <select id="sneaker-brand" onchange="updateBrandedPricing()">
+                            <option value="other">Other / Non-Branded</option>
+                            <option value="nike">Nike</option>
+                            <option value="adidas">Adidas</option>
+                            <option value="jordan">Air Jordan</option>
+                            <option value="yeezy">Yeezy</option>
+                            <option value="newbalance">New Balance</option>
+                            <option value="puma">Puma</option>
+                            <option value="converse">Converse</option>
+                            <option value="reebok">Reebok</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="sneaker-pairs">Number of Pairs</label>
+                        <input type="number" id="sneaker-pairs" min="1" max="10" value="1" onchange="updateTotalPrice()">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="wash-service">Wash Service</label>
+                    <select id="wash-service" onchange="updateTotalPrice()">
+                        <option value="199">Basic Wash — ₹199</option>
+                        <option value="399">Deep Clean — ₹399</option>
+                        <option value="699">Premium Restore — ₹699</option>
+                        <option value="999">Branded Care — ₹999</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="pickup-date">Pickup Date</label>
+                    <input type="date" id="pickup-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="special-notes">Special Notes (optional)</label>
+                    <textarea id="special-notes" rows="3" placeholder="e.g. Stubborn stain on right toe, handle with care..."></textarea>
+                </div>
+
+                <div class="branded-surcharge" id="branded-surcharge" style="display:none;">
+                    <span class="surcharge-icon">👑</span>
+                    <span>Branded sneaker surcharge: <strong>+₹200</strong> for specialized treatment</span>
+                </div>
+
+                <div class="price-summary" id="price-summary">
+                    <div class="price-row">
+                        <span>Service</span>
+                        <span id="summary-service">Basic Wash</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Pairs</span>
+                        <span id="summary-pairs">1</span>
+                    </div>
+                    <div class="price-row" id="surcharge-row" style="display:none;">
+                        <span>Brand Surcharge</span>
+                        <span>+₹200</span>
+                    </div>
+                    <div class="price-row total">
+                        <span>Total</span>
+                        <span id="summary-total">₹199</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full btn-lg" id="submit-booking-btn">
+                    Confirm Booking
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ░░░ SUCCESS MODAL ░░░ -->
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal success-modal" id="success-content">
+            <div class="success-icon">🎉</div>
+            <h2>Booking Confirmed!</h2>
+            <p id="success-message">Your sneaker wash has been booked successfully.</p>
+            <div class="success-details" id="success-details"></div>
+            <button class="btn btn-primary btn-lg" onclick="closeSuccessModal()">Done</button>
+        </div>
+    </div>
+
+    <!-- ░░░ FOOTER ░░░ -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">👟</span>
+                        <span class="logo-text">Wash<span class="logo-accent">It</span></span>
+                    </a>
+                    <p>Premium sneaker cleaning service. Your kicks, our passion.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#services">Services</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#branded">Branded Care</a>
+                    <a href="#how-it-works">How It Works</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <a href="mailto:hello@washit.in">hello@washit.in</a>
+                    <a href="tel:+919876543210">+91 98765 43210</a>
+                    <p>Based in India 🇮🇳</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 WashIt. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
