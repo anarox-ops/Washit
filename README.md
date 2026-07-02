@@ -83,21 +83,6 @@ Once started, the application will serve static frontend assets and the backend 
 
 ---
 
-## 💼 Pricing & Services
-
-| Package | Price | Features |
-| :--- | :--- | :--- |
-| **Basic Wash** | `₹199 / pair` | Exterior wipe-down, Lace cleaning, Deodorizing |
-| **Deep Clean** | `₹399 / pair` | Full exterior wash, Interior deep clean, Stain removal, Sole whitening, Deodorizing |
-| **Premium Restore** | `₹699 / pair` | Deep clean benefits, Color restoration, Crease removal, Re-gluing, Suede/Mesh protection |
-| **Branded Care** | `₹999+ / pair` | Complete premium care with brand-specific products, insured handling, priority turnaround |
-
-### 👑 Branded Sneakers Surcharge
-Sneakers from the following brands attract a **₹200 per pair** surcharge for specialized material care:
-* Nike, Adidas, Jordan, Yeezy, New Balance, Puma, Converse, Reebok.
-
----
-
 ## 🔌 API Reference
 
 ### Book a Sneaker Wash
